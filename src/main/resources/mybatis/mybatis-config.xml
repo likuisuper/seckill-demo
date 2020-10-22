@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!--表列如果是  xxx_yyy 自动开启驼峰命名的映射xxxYyy-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+
+        <!--            <setting name="logImpl" value="STDOUT_LOGGING" />-->
+
+        <!--            打开延迟加载-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!--            开启时，任一方法的调用都会加载该对象的所有延迟加载属性。 否则，每个延迟加载属性会按需加载-->
+        <setting name="aggressiveLazyLoading" value="false"/>
+
+        <!--            当调用对象的clone方法时候,才会进行完全加载-->
+        <setting name="lazyLoadTriggerMethods" value="clone"/>
+    </settings>
+
+    <!--        配置别名-->
+    <typeAliases>
+        <package name="tech.aistar.mapper"/>
+    </typeAliases>
+</configuration>
